@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const Books = require('./models/Books.js');
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 mongoose.connect(process.env.DB_URL);
 
@@ -20,14 +21,17 @@ db.once('open', function () {
 
 const PORT = process.env.PORT || 3001;
 
+
+
+//Proof of life at localhost:3000/test
 app.get('/test', (request, response) => {
-
   response.send('test request received');
-
 });
 
+//Establish .get for /books route
 app.get('/books', getBooks);
 
+// /books async function
 async function getBooks(request, response, next) {
   try {
     let results = await Books.find();
@@ -37,7 +41,34 @@ async function getBooks(request, response, next) {
   }
 }
 
-console.log(getBooks);
+// /books post async function
+
+app.post('/books', postBook);
+
+async function postBook(request, response, next) {
+  console.log(request.body);
+  try {
+    const newBook = await Books.create(request.body);
+    response.status(201).send(newBook);
+  } catch (error) {
+    next(error);
+  }
+}
+
+// /books delete async function
+
+app.delete('/books/:id', deleteBook);
+
+async function deleteBook(request, response, next) {
+  const id = request.params.id;
+  console.log(id);
+  try {
+    await Books.findByIdAndDelete(id);
+    response.status(204).send('Book Deleted');
+  }catch (error) {
+    next(error);
+  }
+}
 
 app.get('*', (request, response) => {
   response.status(404).send('Not availabe');
