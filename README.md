@@ -2,7 +2,7 @@
 
  **Author**: Keelen Fisher | Robert Ball
 
-## **Version**: 1.0.0
+## **Version**: 2.0.0
 
 ## Overview
 
@@ -32,20 +32,25 @@ In order to run this app locally you will need to clone down the backend and fro
 
 ## Change Log
 
----
+—
+ **v 2.0.0**
+
+* Added form to submit new books to the library
+* Added button to delete books from the library
 
 ---
+
 ## Estimates
 
 Name of feature: Establish backend-server and deploy
 
 Estimate of time needed to complete: 2 hours
 
-Start time: 1:30pm
+Start time: 10:30am
 
-Finish time: 3:00pm
+Finish time: 1:30pm
 
-Actual time needed to complete: 1.5 hours
+Actual time needed to complete: 2.5 hours
 
 ---
 
@@ -53,13 +58,11 @@ Name of feature: Establish frontend and deploy
 
 Estimate of time needed to complete:4 hours
 
-Start time: 3:00pm
+Start time: 2:00pm
 
-Finish time: _____
+Finish time: 3:00PM
 
-Actual time needed to complete: _____
-
----
+Actual time needed to complete: 1 Hour
 
 ## Credit and Collaborations
 
@@ -99,7 +102,7 @@ Cooperative
 
 *Keelen - Communication, Frontend component development
 
-*Rob - CSS, Backend development
+*Rob - Backend development and frontend code development
 
 * How can you best utilize these strengths in the development of your application?
 
@@ -124,6 +127,7 @@ Open communication: Honest, clear, feeling comfortable taking risks to clear the
 Timeouts - Walk away when things get heated so they don’t escalate
 
 Grab another member to mediate in the group
+Give ourselves the golden rule: 15 minutes then call on TA.
 
 * What will your team do if one person is taking over the project and not letting the other members contribute?
 
