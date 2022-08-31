@@ -70,6 +70,30 @@ async function deleteBook(request, response, next) {
   }
 }
 
+// /books put async function
+
+app.put('/books/:id', putBooks);
+
+async function putBooks(request, response, next){
+  const id = request.params.id;
+  try {
+    //updated book in formation coming in on the body
+    let data = request.body;
+
+    //findByIdAndUpdate method - 3 arguments
+    //1. id of the thing to update
+    //2. id of the thing to update
+    //3. option objects - { new:true, overwrite: true }
+
+    const updateBook = await Books.findByIdAndUpdate(id, data, { new: true, overwrite: true });
+    response.status(200).send(updateBook);
+
+  }catch (error) {
+    next(error);
+  }
+}
+
+
 app.get('*', (request, response) => {
   response.status(404).send('Not availabe');
 });
