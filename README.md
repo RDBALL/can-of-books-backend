@@ -2,7 +2,7 @@
 
  **Author**: Keelen Fisher | Robert Ball
 
-## **Version**: 2.0.0
+## **Version**: 3.0.0
 
 ## Overview
 
@@ -33,10 +33,11 @@ In order to run this app locally you will need to clone down the backend and fro
 ## Change Log
 
 —
- **v 2.0.0**
+ **v 3.0.0**
 
-* Added form to submit new books to the library
-* Added button to delete books from the library
+* Added form to submit update new books to the library
+* Added button submit that displays new data into the library.
+* Worked in the module to close form after user enters data
 
 ---
 
@@ -56,7 +57,7 @@ Actual time needed to complete: 2.5 hours
 
 Name of feature: Establish frontend and deploy
 
-Estimate of time needed to complete:4 hours
+Estimate of time needed to complete:2 hours
 
 Start time: 2:00pm
 
